@@ -1,17 +1,23 @@
 /*
- Navicat Premium Data Transfer
+ * @Author: princewang666 1213246620@qq.com
+ * @Date: 2024-03-27 17:30:59
+ * @LastEditors: princewang666 1213246620@qq.com
+ * @LastEditTime: 2024-03-28 17:30:18
+ * @FilePath: \WGGT_MALL\Docs\MySQL\mall.sql
+ * @Description: 数据库创建文件
+ * 
+ * Copyright (c) 2024 by wggt, All Rights Reserved. 
+ */
+/*
+ * Source Server         : localhost
+ * Source Server Type    : MySQL
+ * Source Server Version : 8.0.36
+ * Source Host           : localhost:3306
+ * Source Database       : wggt_mall
 
- Source Server         : localhost
- Source Server Type    : MySQL
- Source Server Version : 50719
- Source Host           : localhost:3306
- Source Schema         : mall
-
- Target Server Type    : MySQL
- Target Server Version : 50719
- File Encoding         : 65001
-
- Date: 11/05/2023 15:48:15
+ * Target Server Type    : MySQL
+ * Target Server Version : 8.0.36
+ * File Encoding         : UTF-8
 */
 
 SET NAMES utf8mb4;
