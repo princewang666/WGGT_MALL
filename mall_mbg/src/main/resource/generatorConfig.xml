@@ -5,7 +5,7 @@
 <generatorConfiguration>
     <properties resource="generator.properties" />
     <!-- context指定要连接的数据库，要生成的对象，要使用的参数 -->
-    <!-- id为识别名， -->
+    <!-- id为识别名，targetRuntime为 -->
     <context id="wggt_mall" targetRuntime="MyBatis3" defaultModelType="flat">
         <!-- 配置SQL语句中的前置分隔符 -->
         <property name="beginningDelimiter" value="`" />
