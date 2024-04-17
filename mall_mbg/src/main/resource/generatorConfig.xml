@@ -3,47 +3,64 @@
 
 <!-- 配置信息内容 -->
 <generatorConfiguration>
-    <properties resource="generator.properties" />
     <!-- context指定要连接的数据库，要生成的对象，要使用的参数 -->
-    <!-- id为识别名，targetRuntime为 -->
+    <!-- id为识别名(必须)，targetRuntime指定生成的代码符合的框架，defaultModelType生成pojo的格式，flat表示全列都生成 -->
     <context id="wggt_mall" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 配置读取编码生成格式 -->
         <!-- 配置SQL语句中的前置分隔符 -->
         <property name="beginningDelimiter" value="`" />
         <!-- 配置SQL语句中的后置分隔符 -->
         <property name="endingDelimiter" value="`" />
         <!-- 配置生成Java文件的编码 -->
         <property name="javaFileEncoding" value="UTF-8" />
-        <!-- 为模型生成序列化方法 -->
+        <!-- javaFormatter和xmlFormatter都使用的默认格式 -->
+
+        <!-- 插件扩展功能 -->
+        <!-- 为pojo生成序列化方法 -->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
-        <!-- 为生成的Java模型创建一个toString方法 -->
+        <!-- 为pojo创建一个toString方法 -->
         <plugin type="org.mybatis.generator.plugins.ToStringPlugin" />
         <!-- 生成mapper.xml时覆盖原文件 -->
         <plugin type="org.mybatis.generator.plugins.UnmergeableXmlMappersPlugin" />
-        <commentGenerator type="com.macro.mall.CommentGenerator">
+
+        <!-- 为生成的文件添加注释 -->
+        <commentGenerator>
             <!-- 是否阻止生成的注释 -->
-            <property name="suppressAllComments" value="true" />
+            <property name="suppressAllComments" value="false" />
             <!-- 是否阻止生成的注释包含时间戳 -->
-            <property name="suppressDate" value="true" />
+            <property name="suppressDate" value="false" />
             <!-- 是否添加数据库表的备注信息 -->
             <property name="addRemarkComments" value="true" />
+            <!-- 是否使用老的javax命名空间规则 -->
+            <property name="useLegacyGeneratedAnnotation" value="false" />
         </commentGenerator>
-        <!-- 配置MBG要连接的数据库信息 -->
-        <jdbcConnection driverClass="${jdbc.driverClass}"
-            connectionURL="${jdbc.connectionURL}"
-            userId="${jdbc.userId}"
-            password="${jdbc.password}">
-            <!-- 解决mysql驱动升级到8.0后不生成指定数据库代码的问题 -->
+
+        <!-- 配置数据库连接信息 -->
+        <!-- driverClass为JDBC驱动全类名，connectionURL连接URL(xml的&需要写为&amp;)，userId为用户名，password为密码 -->
+        <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
+            connectionURL="jdbc:mysql://localhost:3306/wggt_mall?useUnicode=true&amp;characterEncoding=utf-8&amp;serverTimezone=Asia/Shanghai"
+            userId="root"
+            password="0405">
+            <!-- MySQL8.x不支持schema或者catalog所以需要添加这个 -->
             <property name="nullCatalogMeansCurrent" value="true" />
         </jdbcConnection>
-        <!-- 用于控制实体类的生成 -->
-        <javaModelGenerator targetPackage="com.macro.mall.model"
-            targetProject="mall-mbg\src\main\java" />
-        <!-- 用于控制Mapper.xml文件的生成 -->
-        <sqlMapGenerator targetPackage="com.macro.mall.mapper"
-            targetProject="mall-mbg\src\main\resources" />
-        <!-- 用于控制Mapper接口的生成 -->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.macro.mall.mapper"
-            targetProject="mall-mbg\src\main\java" />
+
+        <!-- 配置pojo类生成的位置，targetPackage为存放pojo类的全类名，targetProject为项目根目录 -->
+        <javaModelGenerator targetPackage="com.wggt.pojo"
+            targetProject="mall_mbg/src/main/java">
+        </javaModelGenerator>
+        
+        <!-- 配置Mapper.xml生成的位置 -->
+        <sqlMapGenerator targetPackage="com.wggt.mapper"
+            targetProject="mall_mbg/src/main/resource">
+        </sqlMapGenerator>
+
+        <!-- 配置pojo和Mapper接口，type指定了生成器(XMLMAPPER已拒Mapper生成接口) -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.wggt.mapper"
+            targetProject="mall_mbg/src/main/java">
+        </javaClientGenerator>
+
         <!-- 配置需要生成的表，生成全部表tableName设为% -->
         <table tableName="%">
             <!-- 用来指定主键生成策略 -->
