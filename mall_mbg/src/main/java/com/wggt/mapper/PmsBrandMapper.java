@@ -3,6 +3,7 @@ package com.wggt.mapper;
 import com.wggt.pojo.PmsBrand;
 import com.wggt.pojo.PmsBrandExample;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface PmsBrandMapper {
