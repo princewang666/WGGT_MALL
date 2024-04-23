@@ -53,7 +53,7 @@
         
         <!-- 配置Mapper.xml生成的位置 -->
         <sqlMapGenerator targetPackage="com.wggt.mall_mbg_spring.mapper"
-            targetProject="mall_mbg_spring/src/main/resource">
+            targetProject="mall_mbg_spring/src/main/resources">
         </sqlMapGenerator>
 
         <!-- 配置Mapper映射接口，type指定了生成器(XMLMAPPER表示对Mapper生成接口) -->

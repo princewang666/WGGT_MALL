@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-22 15:35:12
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-04-22 16:11:15
+ * @LastEditTime: 2024-04-23 11:00:55
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\service\PmsBrandService.java
  * @Description: 商品品牌管理Service接口
  * 
@@ -13,7 +13,7 @@ package com.wggt.mall_framework.service;
 import java.util.List;
 
 import com.wggt.mall_framework.dto.PmsBrandParam;
-import com.wggt.pojo.PmsBrand;
+import com.wggt.mall_mbg_spring.pojo.PmsBrand;
 
 public interface PmsBrandService {
     /**

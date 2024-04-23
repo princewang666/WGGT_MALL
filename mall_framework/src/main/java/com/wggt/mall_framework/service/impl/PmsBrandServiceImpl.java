@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-22 16:19:58
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-04-23 10:32:48
+ * @LastEditTime: 2024-04-23 11:00:59
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\service\impl\PmsBrandServiceImpl.java
  * @Description: 商品品牌管理Service实现类
  * 
@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 
 import com.wggt.mall_framework.dto.PmsBrandParam;
 import com.wggt.mall_framework.service.PmsBrandService;
-import com.wggt.mapper.PmsBrandMapper;
-import com.wggt.pojo.PmsBrand;
-import com.wggt.pojo.PmsBrandExample;
+import com.wggt.mall_mbg_spring.mapper.PmsBrandMapper;
+import com.wggt.mall_mbg_spring.pojo.PmsBrand;
+import com.wggt.mall_mbg_spring.pojo.PmsBrandExample;
 
 @Service
 public class PmsBrandServiceImpl implements PmsBrandService{

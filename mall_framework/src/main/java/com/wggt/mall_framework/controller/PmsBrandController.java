@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-18 16:33:39
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-04-23 10:26:47
+ * @LastEditTime: 2024-04-23 11:01:35
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\controller\PmsBrandController.java
  * @Description: 商品品牌管理Controllers
  * 
@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wggt.api.CommonResult;
 import com.wggt.mall_framework.service.PmsBrandService;
-import com.wggt.pojo.PmsBrand;
+import com.wggt.mall_mbg_spring.pojo.PmsBrand;
 
 // 声明当前类为控制层
 @RestController

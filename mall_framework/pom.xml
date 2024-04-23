@@ -18,6 +18,13 @@
 	</properties>
 	<dependencies>
 
+		<dependency>
+			<groupId>org.mybatis.spring.boot</groupId>
+			<artifactId>mybatis-spring-boot-starter</artifactId>
+			<version>3.0.3</version>
+		</dependency>
+
+
 		<!-- lombok 简化pojo、dto等开发 -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -43,6 +50,12 @@
 			<groupId>com.wggt</groupId>
 			<artifactId>mall_mbg</artifactId>
 			<version>1.0-SNAPSHOT</version>
+		</dependency>
+		<!-- 自己通过MyBatisGenerator编写生成pojo,xml,mapper,SpringBoot版 -->
+		<dependency>
+			<groupId>com.wggt</groupId>
+			<artifactId>mall_mbg_spring</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 		<!-- 自己编写的工具，包含统一返回接口 -->
 		<dependency>
