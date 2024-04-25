@@ -1,8 +1,0 @@
-# Spring相关
-spring:
-  # 数据库连接信息
-  datasource:
-    # driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/wggt_mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
-    username: root
-    password: 0405

@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.wggt.api.CommonResult;
 import com.wggt.mall_framework.service.PmsBrandService;
-import com.wggt.mall_mbg_spring.pojo.PmsBrand;
+import com.wggt.pojo.PmsBrand;
 
 // 声明当前类为控制层
 @RestController

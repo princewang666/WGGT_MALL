@@ -13,7 +13,7 @@ package com.wggt.mall_framework.service;
 import java.util.List;
 
 import com.wggt.mall_framework.dto.PmsBrandParam;
-import com.wggt.mall_mbg_spring.pojo.PmsBrand;
+import com.wggt.pojo.PmsBrand;
 
 public interface PmsBrandService {
     /**

@@ -17,9 +17,9 @@ import org.springframework.stereotype.Service;
 
 import com.wggt.mall_framework.dto.PmsBrandParam;
 import com.wggt.mall_framework.service.PmsBrandService;
-import com.wggt.mall_mbg_spring.mapper.PmsBrandMapper;
-import com.wggt.mall_mbg_spring.pojo.PmsBrand;
-import com.wggt.mall_mbg_spring.pojo.PmsBrandExample;
+import com.wggt.mapper.PmsBrandMapper;
+import com.wggt.pojo.PmsBrand;
+import com.wggt.pojo.PmsBrandExample;
 
 @Service
 public class PmsBrandServiceImpl implements PmsBrandService{

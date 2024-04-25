@@ -5,7 +5,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan(basePackages = {"com.wggt.mall_mbg_spring.mapper"})
+// 指定扫描存放在其它项目的mapper
+@MapperScan(basePackages = {"com.wggt.mapper"})
 public class MallFrameworkApplication {
 
 	public static void main(String[] args) {

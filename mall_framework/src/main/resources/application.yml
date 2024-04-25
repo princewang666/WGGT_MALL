@@ -7,10 +7,10 @@ server:
 spring:
   # 数据库连接信息
   datasource:
-    driverClassName: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/wggt_mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
-    password: 0405
+    # yml解析以0，0x，0b开头的数字会自动按8，16，2进制解析，要加''或者""来解决
+    password: '0405'
   # 应用名
   application:
     name: mall_framework

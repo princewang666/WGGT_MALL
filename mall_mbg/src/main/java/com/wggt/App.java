@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-15 11:19:03
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-04-17 17:10:12
+ * @LastEditTime: 2024-04-25 17:27:39
  * @FilePath: \WGGT_MALL\mall_mbg\src\main\java\com\wggt\App.java
  * @Description: 执行MyBatis Generator生成xml
  * 
@@ -33,7 +33,7 @@ public class App
         // 当生成同名xml覆盖
         boolean overwrite = true;
         // 读取配置文件
-        File configFile = new File("mall_mbg/src/main/resource/generatorConfig.xml");
+        File configFile = new File("mall_mbg/src/main/resources/generatorConfig.xml");
         // 创建配置相关信息
         ConfigurationParser cp = new ConfigurationParser(warnings);
         Configuration config = cp.parseConfiguration(configFile);
