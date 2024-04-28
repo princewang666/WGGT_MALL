@@ -14,3 +14,7 @@ spring:
   # 应用名
   application:
     name: mall_framework
+
+# SpringDoc相关
+springdoc:
+  version: '2.5.0'
