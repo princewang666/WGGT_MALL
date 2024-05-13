@@ -1,3 +1,13 @@
+/*
+ * @Author: princewang666 1213246620@qq.com
+ * @Date: 2024-05-13 17:25:38
+ * @LastEditors: princewang666 1213246620@qq.com
+ * @LastEditTime: 2024-05-13 19:24:43
+ * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\SpringDocApi.java
+ * @Description: 
+ * 
+ * Copyright (c) 2024 by wggt, All Rights Reserved. 
+ */
 package com.wggt.mall_framework;
 
 import org.springdoc.core.models.GroupedOpenApi;
