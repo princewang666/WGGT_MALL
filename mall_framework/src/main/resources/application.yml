@@ -17,4 +17,7 @@ spring:
 
 # SpringDoc相关
 springdoc:
-  version: '2.5.0'
+  # 文档版本
+  version: '1.0'
+  # 开发服务器url
+  dev-url: 'http://localhost:8080'
