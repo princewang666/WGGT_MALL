@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-18 16:33:39
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-05-20 11:41:08
+ * @LastEditTime: 2024-05-20 17:30:13
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\controller\PmsBrandController.java
  * @Description: 商品品牌管理Controllers
  * 
@@ -13,15 +13,20 @@ package com.wggt.mall_framework.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.wggt.api.CommonResult;
+import com.wggt.mall_framework.dto.PmsBrandParam;
 import com.wggt.mall_framework.service.PmsBrandService;
 import com.wggt.pojo.PmsBrand;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
@@ -45,9 +50,70 @@ public class PmsBrandController {
     @ApiResponse(
         description = "统一返回结果,code代表返回码,message提示信息,data返回数据,此处为商品品牌"
     )
-    
+    // Get 查
     @GetMapping("/listAll")
     public CommonResult<List<PmsBrand>> getList() {
         return CommonResult.success(brandService.listAllBrand());
+    }
+
+    @Operation(
+        summary = "创建品牌",
+        description = "从前端表单创建新品牌"
+    )
+    @ApiResponse(
+        description = "统一返回结果,code代表返回码,message提示信息,data返回数据,此处为影响行数"
+    )
+    // Post 增
+    @PostMapping("/create")
+    // 参数信息只需声明描述，类结构信息schema和示例会自动生成，且可以生成复合类的
+    public CommonResult<Integer> create(@Parameter(description = "品牌信息", required = true)PmsBrandParam pmsBrandParam) {
+        CommonResult<Integer> commonResult;
+        int count = brandService.createBrand(pmsBrandParam);
+        if (count == 1) {
+            commonResult = CommonResult.success(count);
+        } else {
+            commonResult = CommonResult.failed();
+        }
+        return commonResult;
+    }
+
+    @Operation(
+        summary = "更新品牌",
+        description = "根据id,前端表单更新品牌,注意品牌更新时也要更新商品名称"
+    )
+    @ApiResponse(
+        description = "统一返回结果,code代表返回码,message提示信息,data返回数据,此处为影响行数"
+    )
+    // Put 改
+    @PutMapping("/update/{id}")
+    public CommonResult<Integer> update(@Parameter(description = "id", required = true)Long id, @Parameter(description = "品牌信息", required = true)PmsBrandParam pmsBrandParam) {
+        CommonResult<Integer> commonResult;
+        int count = brandService.updateBrand(id, pmsBrandParam);
+        if (count == 1) {
+            commonResult = CommonResult.success(count);
+        } else {
+            commonResult = CommonResult.failed();
+        }
+        return commonResult;
+    }
+
+    @Operation(
+        summary = "删除品牌",
+        description = "根据id删除品牌"
+    )
+    @ApiResponse(
+        description = "统一返回结果,code代表返回码,message提示信息,data返回数据,此处为影响行数"
+    )
+    // Delete 删
+    @DeleteMapping("/delete/{id}")
+    public CommonResult<Integer> delete(@Parameter(description = "id", required = true)Long id) {
+        CommonResult<Integer> commonResult;
+        int count = brandService.deleteBrand(id);
+        if (count == 1) {
+            commonResult = CommonResult.success(count);
+        } else {
+            commonResult = CommonResult.failed();
+        }
+        return commonResult;
     }
 }

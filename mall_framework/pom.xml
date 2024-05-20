@@ -17,6 +17,13 @@
 		<java.version>21</java.version>
 	</properties>
 	<dependencies>
+
+		<!-- Hutool java工具库 -->
+		<dependency>
+			<groupId>cn.hutool</groupId>
+			<artifactId>hutool-all</artifactId>
+			<version>5.8.27</version>
+		</dependency>
 		<!-- MyBatis结合SpringBoot开发 -->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
