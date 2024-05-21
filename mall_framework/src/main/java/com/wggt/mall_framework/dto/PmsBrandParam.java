@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-22 15:57:56
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-04-22 16:18:04
+ * @LastEditTime: 2024-05-21 16:49:44
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\dto\PmsBrandParam.java
  * @Description: 商品品牌传输参数
  * 

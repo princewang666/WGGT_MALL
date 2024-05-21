@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-05-20 09:46:05
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-05-20 10:16:12
+ * @LastEditTime: 2024-05-21 17:24:31
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\config\OpenAPIConfig.java
  * @Description: OpenAPI文档配置信息
  * 

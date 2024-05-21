@@ -36,7 +36,7 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.32</version>
 		</dependency>
-		<!--  -->
+		<!-- SpringDoc结合Swagger依赖 -->
 		<dependency>
 			<groupId>org.springdoc</groupId>
 			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
