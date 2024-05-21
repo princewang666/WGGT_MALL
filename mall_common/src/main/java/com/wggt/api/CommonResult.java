@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-23 10:07:10
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-04-23 10:20:57
+ * @LastEditTime: 2024-05-21 16:43:33
  * @FilePath: \WGGT_MALL\mall_common\src\main\java\com\wggt\api\CommonResult.java
  * @Description: 通用返回结果封装类
  * 
