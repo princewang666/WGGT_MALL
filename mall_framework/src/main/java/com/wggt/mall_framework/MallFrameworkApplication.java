@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-04-11 10:33:47
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-05-13 17:24:22
+ * @LastEditTime: 2024-05-21 10:57:51
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\MallFrameworkApplication.java
  * @Description: 项目启动文件
  * 
@@ -18,6 +18,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 // 指定扫描存放在其它项目的mapper
 @MapperScan(basePackages = {"com.wggt.mapper"})
 public class MallFrameworkApplication {
+	// 项目Swagger-ui接口文档:http://localhost:8080/swagger-ui/index.html
 	public static void main(String[] args) {
 		SpringApplication.run(MallFrameworkApplication.class, args);
 	}
