@@ -14,9 +14,13 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+import com.redis.om.spring.annotations.EnableRedisDocumentRepositories;
+
 @SpringBootApplication
 // 指定扫描存放在其它项目的mapper
 @MapperScan(basePackages = {"com.wggt.mapper"})
+// 扫描当前包下有@Document的注解
+@EnableRedisDocumentRepositories(basePackages = "com.wggt.mall_framework.*")
 public class MallFrameworkApplication {
 	// 项目Swagger-ui接口文档:http://localhost:8080/swagger-ui/index.html
 	public static void main(String[] args) {

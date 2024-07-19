@@ -14,6 +14,11 @@ spring:
   # 应用名
   application:
     name: mall_framework
+  # redis连接信息
+  data:
+    redis:
+      host: 192.168.114.128
+      port: 6379
 
 # SpringDoc相关
 springdoc:

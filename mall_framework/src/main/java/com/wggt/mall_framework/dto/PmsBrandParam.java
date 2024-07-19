@@ -12,7 +12,7 @@ package com.wggt.mall_framework.dto;
 
 import lombok.Data;
 
-// 一个注解包含 toString，equals，hashcode，getter，setter，ArgsConstructor
+// 一个注解包含 @ToString, @EqualsAndHashCode, @Getter @Setter @RequiredArgsConstructor
 @Data
 public class PmsBrandParam {
     private String name;
