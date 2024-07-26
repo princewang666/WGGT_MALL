@@ -17,7 +17,7 @@ spring:
   # redis连接信息
   data:
     redis:
-      host: 192.168.114.128
+      host: 192.168.114.129
       port: 6379
 
 # SpringDoc相关
