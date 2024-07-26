@@ -2,7 +2,7 @@
  * @Author: princewang666 1213246620@qq.com
  * @Date: 2024-07-19 17:20:03
  * @LastEditors: princewang666 1213246620@qq.com
- * @LastEditTime: 2024-07-24 15:34:56
+ * @LastEditTime: 2024-07-26 17:22:31
  * @FilePath: \WGGT_MALL\mall_framework\src\main\java\com\wggt\mall_framework\controller\UmsMemberController.java
  * @Description: 
  * 
@@ -52,6 +52,7 @@ public class UmsMemberController {
         }
         String authCode = sb.toString();
         // 存入redis
+        Member member = Member.of(telephone, authCode);
         umsMemberService.save(Member.of(telephone, authCode));
         return CommonResult.success(authCode, "获取验证码成功");
     }
